@@ -33,16 +33,20 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toRightOf="@+id/image_view_map"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_view_candy_store" />
+        app:layout_constraintTop_toBottomOf="@+id/image_view_candy_store"
+        android:onClick="createMapIntent"
+        android:clickable="true"/>
 
     <TextView
         android:id="@+id/text_view_phone"
         android:layout_width="0dp"
         android:layout_height="30dp"
         android:layout_marginLeft="0dp"
-        android:layout_marginRight="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginRight="8dp"
+        android:clickable="true"
         android:gravity="center_vertical"
+        android:onClick="createPhoneIntent"
         android:text="(012)345-6789"
         android:textColor="?android:attr/actionMenuTextColor"
         android:textSize="18sp"
@@ -64,14 +68,15 @@
 
     <ImageView
         android:id="@+id/image_view_phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="11dp"
+        android:layout_height="18dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:adjustViewBounds="true"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_view_map"
-        app:srcCompat="@android:drawable/stat_sys_phone_call" />
+        app:srcCompat="@android:drawable/stat_sys_phone_call"
+        android:onClick="createPhoneIntent"/>
 
     <ImageView
         android:id="@+id/image_view_hours"
@@ -93,6 +98,7 @@
         android:adjustViewBounds="true"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_view_candy_store"
-        app:srcCompat="@android:drawable/ic_dialog_map" />
+        app:srcCompat="@android:drawable/ic_dialog_map"
+        android:onClick="createMapIntent"/>
 
 </android.support.constraint.ConstraintLayout>
